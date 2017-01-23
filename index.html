@@ -1,7 +1,142 @@
-<html>
+<HTML>
 <head>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="qr1.js"></script>
+<script>
+var hidden = false;
+var qrcode1 ; 
+var qrcode2 ; 
+var qrcode3 ; 
+var qrcode4 ; 
+var qrcode5 ; 
+var qrcode6 ;
+
+
+
+$(function(){
+qrcode1 = new QRCode("qrcode1");
+qrcode2 = new QRCode("qrcode2");
+qrcode3 = new QRCode("qrcode3");
+qrcode4 = new QRCode("qrcode4");
+qrcode5 = new QRCode("qrcode5");
+qrcode6 = new QRCode("qrcode6");
+
+});
+
+function toggle(){
+  if(hidden){
+    $("#text1").show()
+    $("#text2").show()
+    $("#text3").show()
+    $("#text4").show()
+    $("#text5").show()
+    $("#text6").show()
+  }
+  else
+    {
+      $("#text1").hide()
+      $("#text2").hide()
+      $("#text3").hide()
+      $("#text4").hide()
+      $("#text5").hide()
+      $("#text6").hide()
+    }
+  hidden = !hidden
+}
+
+
+</script>
+<style>
+td{padding-left:60px;width:80px}
+.qrcode{width:80px}
+</style>
+
+
 </head>
-<body>
-This is a test body
-</body>
+<!--http://davidshimjs.github.io/qrcodejs/-->
+<Body>
+<TABLE>
+
+  <TR>
+    <TD>
+      <div id="qrcode1" class="qrcode"></div>
+    </TD>
+    <TD>
+      <div id="qrcode2" class="qrcode"></div>
+    </TD>
+        <TD>
+      <div id="qrcode3" class="qrcode"></div>
+    </TD>
+  </TR>
+ <TR>
+
+    <TD>
+      <input id="text1" type="text"  style="width:80%" onkeyup="qrcode1.makeCode($('#text1').val());"/><br />
+    </TD>
+
+    <TD>
+      <input id="text2" type="text"  style="width:80%" onkeyup="qrcode2.makeCode($('#text2').val());"/><br />
+    </TD>
+    <TD>
+      <input id="text3" type="text"  style="width:80%" onkeyup="qrcode3.makeCode($('#text3').val());"/><br />
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      <input  type="text"  value ="Start " style="width:80%" /><br />
+    </TD>
+     <TD>
+      <input  type="text"  value ="location " style="width:80%" /><br />
+    </TD>
+        <TD>
+      <input  type="text"  value ="location " style="width:80%" /><br />
+    </TD>
+  </TR>
+ <tr>
+<td style ="height:80px"></td>
+</tr>
+<TR>
+    <TD>
+      <div id="qrcode4" class="qrcode"></div>
+    </TD>
+    <TD>
+      <div id="qrcode5" class="qrcode"></div>
+    </TD>
+        <TD>
+      <div id="qrcode6" class="qrcode"></div>
+    </TD>
+  </TR>
+
+  <TR>
+    <TD>
+      <input id="text4" type="text"  style="width:80%" onkeyup="qrcode4.makeCode($('#text4').val());"/><br />
+    </TD>
+    <TD>
+      <input id="text5" type="text"  style="width:80%" onkeyup="qrcode5.makeCode($('#text5').val());"/><br />
+    </TD>
+    <TD>
+      <input id="text6" type="text"  style="width:80%" onkeyup="qrcode6.makeCode($('#text6').val());"/><br />
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      <input  type="text"  value ="location " style="width:80%" /><br />
+    </TD>
+     <TD>
+      <input  type="text"  value ="location " style="width:80%" /><br />
+    </TD>
+        <TD>
+      <input  type="text"  value ="Remember to toggle! " style="width:80%" /><br />
+<button onclick="toggle()">Toggle</button>    
+</TD>
+  </TR>
+ <tr>
+<td style ="height:60px"></td>
+</tr>
+
+
+  </Table>
+  
+
+</Body>
 </html>
