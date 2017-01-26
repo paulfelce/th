@@ -16,6 +16,7 @@ qrcode6 = new QRCode("qrcode6");
 });
 function toggle(){
   if(hidden){
+    $("#version").show()
     $("#text1").show()
     $("#text2").show()
     $("#text3").show()
@@ -25,6 +26,7 @@ function toggle(){
   }
   else
     {
+      $("#version").hide()
       $("#text1").hide()
       $("#text2").hide()
       $("#text3").hide()
