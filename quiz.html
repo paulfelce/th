@@ -2,14 +2,15 @@
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
-$('#answer').on('input',function(){
-  check_answer();    
+$(function(){
+  $('#answer').on('input',function(){
+    check_answer();    
+  });
 });
-  
 function check_answer(){
     console.log($('#answer').val().toLowerCase());
   if($('#answer').val().toLowerCase()=='elephant')
-    {$('#result').text('Yippeee, now find your prize hidden in the Peppa cooker');alert('test');}
+    {$('#result').text('Yippeee, now find your prize hidden in the Peppa cooker')}
   
 }
   
