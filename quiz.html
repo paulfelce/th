@@ -3,6 +3,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
 $(function(){
+  //event handlers need to be assigned. So placed in document.load
   $('#answer').on('input',function(){
     check_answer();    
   });
@@ -24,7 +25,7 @@ function check_answer(){
 <div>
 Hey Amy, type in what you see in the picture.
 </div>
-  <input id="answer" ></input><button onclick="check_answer()">Check</button>
+  <input id="answer" ></input>
 <div id="result"></div>
 <img src="elephant.jpg"></img>
 </body>
