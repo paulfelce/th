@@ -1,0 +1,20 @@
+<HTML>
+<head>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$('#answer').on('input',function(){
+  if($('#answer').val().toLowerCase()=='elephant')
+    {$('#result').text('Yippeee, now find your prize hidden in the Peppa cooker');}
+    
+});
+</script>
+</head>
+<body>
+
+<div>
+Hey Amy, type in the what you see in the picture.
+<input id="answer" ></input>
+<div id="result"></div>
+<img src="elephant.jpg"></img>
+</body>
+<html>
