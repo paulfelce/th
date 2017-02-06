@@ -23,6 +23,7 @@ function toggle(){
     $("#text4").show()
     $("#text5").show()
     $("#text6").show()
+    $('#bitly').show();
   }
   else
     {
@@ -33,6 +34,7 @@ function toggle(){
       $("#text4").hide()
       $("#text5").hide()
       $("#text6").hide()
+      $('#bitly').hide();
     }
   hidden = !hidden
 }
