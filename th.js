@@ -24,6 +24,7 @@ function toggle(){
     $("#text5").show()
     $("#text6").show()
     $('#bitly').show();
+    $('#version').show();
   }
   else
     {
@@ -35,6 +36,7 @@ function toggle(){
       $("#text5").hide()
       $("#text6").hide()
       $('#bitly').hide();
+      $('#version').hide();
     }
   hidden = !hidden
 }
