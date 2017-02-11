@@ -1,3 +1,22 @@
+############################# Code to reset values to default ##########################
+#reset treasure hunt firebase values
+function reset_values()
+{
+            $node = @{
+            data='To find your next clue, press the button shown below (hidden near Alexa)'                
+               img="https://paulfelce.github.io/th/nobo.jpg"
+
+                }
+$json = $node | ConvertTo-Json
+$response = Invoke-RestMethod 'https://blinding-fire-6477.firebaseio.com/th/node1.json' -Method Put -Body $json -ContentType 'application/json'
+write-host $response
+} # wrapped in a function so not run by default
+############################################################################################
+
+
+
+
+
 #log script obtained from
 #https://community.spiceworks.com/topic/1233789-add-logging-to-powershell-script
 
