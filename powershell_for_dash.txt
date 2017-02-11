@@ -37,7 +37,7 @@ while($true){
         if($mac -eq $dashButtonMac){
             Write-Output ("Dash Button has been detected : " + $mac)
          #data To find your next clue, press the button shown below (hidden near Alexa)
-         #img https://paulfelce.github.io/th/nobo.img   
+         #img https://paulfelce.github.io/th/nobo.jpg   
             $node = @{
                 data='Well done Amy, your next clue is hidden by the TV'
                 }
