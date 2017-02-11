@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="//cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<script src="//cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+
+<script>
+		var app = angular.module("treasurehuntApp",["firebase"])
+		
+	
+		app.controller("clueController" , function($scope , $firebaseArray)  
+		{
+		$scope.clues  = $firebaseArray(new Firebase( "https://blinding-fire-6477.firebaseio.com/th"));
+
+      
+      }
+		);//end app.controller
+</script>
+
+
+<head>
+<body>
+
+<!--Shows us accessing firebaseArray and filtering-->
+<!--Angular makes this crazily simple-->
+<div ng-app="treasurehuntApp" ng-controller="clueController as imageCtrl ">
+  
+<ul ng-repeat = "clue in clues">
+  <div>{{clue.data}}</div>
+  <div><img width="800px" height="600px" src="{{clue.img}}">
+  
+  </ul>
+
+<div>
+
+</div>
+
+
+</body>
+</html>
